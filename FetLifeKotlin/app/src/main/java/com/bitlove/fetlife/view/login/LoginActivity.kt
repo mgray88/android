@@ -1,10 +1,10 @@
 package com.bitlove.fetlife.view.login
 
 import android.app.Activity
-import android.app.Fragment
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import com.bitlove.fetlife.FetLifeApplication
 import com.bitlove.fetlife.R
@@ -42,11 +42,13 @@ class LoginActivity : FragmentActivity(), NavigationCallback {
 
     private fun setStateContentFragment(savedInstanceState: Bundle?) {
         navigation = savedInstanceState?.getInt(LoginActivity.STATE_KEY_NAVIGATION) ?: R.id.navigation_login
-        setContentFragment(navigationFragmentFactory.createFragment(navigation),false)
+        if (savedInstanceState == null) {
+            setContentFragment(navigationFragmentFactory.createFragment(navigation),false)
+        }
     }
 
     private fun setContentFragment(fragment: Fragment, addToBackStack: Boolean = true) {
-        fragmentManager.inTransaction {
+        supportFragmentManager.inTransaction {
             val transaction = replace(R.id.fragment_container, fragment)
             if (addToBackStack) {
                 transaction.addToBackStack(null)

@@ -217,10 +217,44 @@ class ExploreStory: CardViewDataHolder(), SyncObject<ExploreStoryEntity>, Favori
     }
 
     override fun getChild(): CardViewDataHolder? {
-        return if (exploreEvents?.isEmpty() == false) {
+        return if (exploreEvents?.size == 1) {
             exploreEvents!!.first().getChild()
         } else {
             null
+        }
+    }
+
+    override fun getCreatedAt(): String? {
+        return if (exploreEvents?.isEmpty() == false) {
+            exploreEvents!!.first().getCreatedAt()
+        } else {
+            null
+        }
+    }
+
+    override fun isPlaceholder(): Boolean {
+        //TODO: remove workaround
+        return !isSupported()
+    }
+
+    private fun isSupported(): Boolean {
+        return if (exploreEvents?.isEmpty() != false) {
+            false
+        } else {
+            return when (exploreStoryEntity.action) {
+                "post_created",
+                "picture_created",
+                "like_created" -> {
+                    if (exploreEvents!![0]?.getEntity().contentId != null) {
+                        true
+                    } else if (exploreEvents!!.size > 1 ){
+                        false
+                    } else {
+                        exploreEvents!![0]?.getEntity().contentId != null
+                    }
+                }
+                else -> false
+            }
         }
     }
 

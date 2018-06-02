@@ -4,7 +4,7 @@ Welcome to FetLife's open-source Android app!
 
 ### Features
 
-With offcial FetLife Android App you can...
+With official FetLife Android App you can...
 
 - browse your Activity Feed
 - chat with other Kinksters
@@ -26,11 +26,23 @@ With offcial FetLife Android App you can...
 
 Installation of FetLife App is a bit different than for Apps from the Google Play store, but it is still pretty straightforward, Android OS will guide you through the whole process. 
 
-Just download our latest version [fetlife-2.13.0.apk](https://github.com/fetlife/android/releases/download/v2.13.0/fetlife-2.13.0.apk)  or our preview version [fetlife-2.14.7.apk](https://github.com/fetlife/android/releases/download/v2.14.7/fetlife-2.14.7.apk) and follow the on-screen prompts on your device.
+Just download our latest version [fetlife-2.15.0.apk](https://github.com/fetlife/android/releases/download/v2.15.0/fetlife-2.15.0.apk) and follow the on-screen prompts on your device.
 
 For more details please check out [FetLife Android App Installation Guide](https://github.com/fetlife/android/files/1127920/FetLifeAndroidAppInstallationGuide.pdf)
 
 If something went wrong and you still don’t have the App or you still have further questions left, don’t be worried just check out the [FetLife Android App FAQ and Troubleshooting Guide](https://github.com/fetlife/android/files/1127921/FetLifeAndroidAppFAQandTroubleshootingGuide.pdf) or get in contact with us via caretakers@fetlife.com or dreamlite@fetlife.com
+
+### FetLife App is being renewd
+
+During the last two years since the first version of Android App got released several things have changed in the area of the underlying For these reasons we finally decided it is time to refactor our codebase and release a brand new App.
+
+For several weeks now behind the scenes we are already working on the new App, and even though we are not quite finished yet, we would like to involve you in the process of Development as early as we can. 
+Many of the changes and improvements made in the new version of the App, won't be visible for you, but we hope those changes that are visible will make you like the new version of the FetLife App even more than the previous one.
+
+If you are interested in our current stage of Development, feel free to take a look at our alpha version: [fetlife-3-alpha1.apk](https://github.com/fetlife/android/releases/download/v0.3-alpha1/fetlife-3-alpha1.apk).
+Note: As the work on alpha version is still in progress, several of the features of the old App are still missing. To make sure you don't lose any functionality you already got used to the alpha version will not override the original App but will rather appear as a separate App in your App list after installation.
+
+If you had any comment, feedback, remark about the alpha version, please reach to us via FetLife private messaging (username: Dreamlite) or via email: krisztian@fetlife.com
 
 ### Kinksters Helping Kinksters
 
@@ -43,7 +55,7 @@ To get the fastest response we suggest you to look first at [FetLife Android App
 
 If did not find a solution or you find a bug or you have a nice idea hot to improve please start by reading through the current list of [open issues](https://github.com/fetlife/fetlife-android/issues) and if you can't find anything about your bug or suggestion please [submit a new issue](https://github.com/fetlife/fetlife-android/issues/new).
 
-If you prefer not registering to GitHub you can still send your remark or question either to our cartakers (caretakers@fetlife.com) or directly to our Android developer (dreamlite@fetlife.com).
+If you prefer not registering to GitHub you can still send your remark or question either to our caretakers (caretakers@fetlife.com) or directly to our Android developer (dreamlite@fetlife.com).
 
 
 ### Want to Contribute
@@ -64,7 +76,7 @@ To get the code running just follow the following steps:
 
 Note: To protect our users for any malicious modification of the App, FetLife keeps its signature keys private.
 For you as a contributor it means you will only be able to build a debug (signed) version of the App. 
-Apps signed with debug keys are fully functional, but because of the signature clash they cannot be installed on top of and exisiting relelase version. To be able to run your debug version you have to remove your official FetLife App from your device first.
+Apps signed with debug keys are fully functional, but because of the signature clash they cannot be installed on top of and existing release version. To be able to run your debug version you have to remove your official FetLife App from your device first.
 
 Should you have any further questions about contributing to FetLife Android Open Source project feel free to [submit a new GitHib issue](https://github.com/fetlife/fetlife-android/issues/new) or get in contact with our Android Developer directly via dreamlite@fetlife.com.
 
